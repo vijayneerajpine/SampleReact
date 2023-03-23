@@ -10,9 +10,9 @@ const putInCache = async (request, response) => {
 };
 const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
   // First try to get the resource from the cache
-  if (request.method === "POST") {
-    return false;
-  }
+  // if (request.method === "POST") {
+  //   return false;
+  // }
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
